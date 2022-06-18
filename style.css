@@ -21,10 +21,11 @@ body {
     top: 25%;
     width: 100%;
     height: 160px;
-    background: rgb(0, 0, 0, 0.5);
+    background: rgb(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .logo {
@@ -43,4 +44,28 @@ body {
 .right-bar {
     width: 60%;
     background-color: rgb(234, 234, 234);
+}
+
+.description {
+    margin-top: 12%;
+    margin-left: 5%;
+    width: 75%;
+    font-size: 2rem;
+}
+
+form {
+    font-size: 1.5rem;
+    padding: 5%;
+    margin-top: 2%;
+    background-color: white;
+    box-shadow: 0 5px 10px 3px rgb(182, 182, 182);
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+label {
+    display: block;
 }
