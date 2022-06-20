@@ -64,7 +64,7 @@ body {
     margin-top: 10%;
     margin-left: 5%;
     width: 75%;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 span {
@@ -96,6 +96,12 @@ input {
     border-radius: 5px;
 }
 
+.error {
+    padding: 3% 0;
+    font-size: .7rem;
+    color: red;
+}
+
 .create-account {
     cursor: pointer;
     width: 200px;
@@ -123,6 +129,10 @@ input {
     color: rgb(78, 117, 78);
 }
 
+.picture-credit a {
+    color: white;
+}
+
 .have-account a:visited {
     color: rgb(78, 117, 78);
 }
@@ -135,4 +145,9 @@ input:focus {
     outline: 0;
     border: 1px solid rgb(102, 173, 249);
     box-shadow: 1px 2px 5px rgb(182, 182, 182); 
+}
+
+input:invalid {
+    outline: 0;
+    border: 1px solid red;
 }
