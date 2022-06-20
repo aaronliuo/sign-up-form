@@ -137,6 +137,11 @@ input {
     color: rgb(78, 117, 78);
 }
 
+.have-account a:hover {
+    transition-duration: 0.2s;
+    color: rgb(91, 145, 91);
+}
+
 a:visited {
     color: white;
 }
@@ -150,4 +155,9 @@ input:focus {
 input:invalid {
     outline: 0;
     border: 1px solid red;
+}
+
+.create-account:hover {
+    transition-duration: 0.2s;
+    background-color: rgb(91, 145, 91);
 }
