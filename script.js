@@ -13,6 +13,7 @@ function formValidity(event) {
     const email = document.getElementById('user-email');
     if(!email.validity.valid) {
         document.querySelector('#user-email + .error').textContent = "*Invalid email";
+        event.preventDefault();
     }
 
     const phoneNumber = document.getElementById('phone');
