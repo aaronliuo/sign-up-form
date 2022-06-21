@@ -1,6 +1,4 @@
-
-function passwordValidity(event) {
-    console.log("executed");
+function formValidity(event) {
     const password = document.getElementById('user-password');
     const confirmPassword = document.getElementById('confirm-password');
     for(let i=0; i<inputs.length; i++) {
@@ -10,10 +8,6 @@ function passwordValidity(event) {
             errorMessage.textContent = "*Please fill out this field.";
             event.preventDefault();
         }
-        else {
-            inputs[i].setCustomValidity("");
-            errorMessage.textContent = "";
-        }
     }
     
     const email = document.getElementById('user-email');
@@ -22,8 +16,10 @@ function passwordValidity(event) {
     }
 
     const phoneNumber = document.getElementById('phone');
-    if(!email.validity.valid) {
+    if(!/^\d{3}[- ]?\d{3}[- ]?\d{4}$/.test(phoneNumber.value)) {
+        phoneNumber.setCustomValidity("Error");
         document.querySelector('#phone + .error').textContent = "*Invalid phone number.";
+        event.preventDefault();
     }
 
     if(password.value.length == 0) {
@@ -34,11 +30,6 @@ function passwordValidity(event) {
         confirmPassword.setCustomValidity("Error");
         document.querySelector('#user-password + .error').textContent = "*Please put in same passwords.";
         event.preventDefault();
-    }
-    else {
-        password.setCustomValidity("");
-        confirmPassword.setCustomValidity("");
-        document.querySelector('#user-password + .error').textContent = "";
     }
 }
 
@@ -54,10 +45,10 @@ function updateValidity(event) {
     }
 }
 
+
 const inputs = document.querySelectorAll('input');
 const form = document.getElementById('sushi-form');
-form.addEventListener('submit', passwordValidity);
+form.addEventListener('submit', formValidity);
 inputs.forEach((input) => {
     input.addEventListener('input', updateValidity);
 })
-
